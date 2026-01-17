@@ -1,112 +1,308 @@
-.card-title,
-.text-dentist {
-    color: #2456a6;
+/* Zenith Dental Theme - Modern & Professional */
+
+:root {
+    --primary-color: #0056b3;
+    /* Deep Blue */
+    --accent-color: #17a2b8;
+    /* Teal/Cyan */
+    --warm-accent: #fd7e14;
+    /* Soft Orange */
+    --dark-text: #343a40;
+    --light-bg: #f8f9fa;
+    --white: #ffffff;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-hover-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark-text);
+    background-color: var(--light-bg) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.navbar-brand {
+    font-family: var(--font-heading);
+}
+
+/* Utilities */
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent-color) !important;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--white) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.nav-link {
+    color: var(--dark-text) !important;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+}
+
+.dentist-logo-parta {
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.dentist-logo-partb {
+    color: var(--accent-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Component: Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 50px;
+    /* Pill shape */
+    padding: 10px 25px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 50, 150, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #004494;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 50, 150, 0.3);
+}
+
+.btn-warning {
+    /* Used for Main CTA */
+    background-color: var(--warm-accent);
+    border-color: var(--warm-accent);
+    color: white;
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(253, 126, 20, 0.3);
+    transition: all 0.2s;
+}
+
+.btn-warning:hover {
+    color: white;
+    background-color: #e36802;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(253, 126, 20, 0.4);
+}
+
+/* Component: Cards */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    background: var(--white);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .card-footer {
-    background-color: #2456a6 !important;
+    background-color: var(--white) !important;
+    border-top: none;
+    padding-bottom: 1.5rem;
 }
 
-.card {
-    border: 1px solid #2456a6 !important;
+/* Component: Services */
+.service-badge {
+    display: inline-block;
+    background-color: var(--white);
+    color: var(--primary-color);
+    border: 1px solid #e9ecef;
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s;
 }
 
-.border-top {
-    border-top: 1px solid #2456a6 !important
+.service-badge:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
 }
 
-.bg-primary {
-    background-color: #2456a6 !important;
+/* Layout: Hero Section */
+.hero-section {
+    position: relative;
+    background-color: #eff6ff;
+    /* Very light blue */
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+    border-radius: 0 0 20px 20px;
 }
 
-.dentist-badge {
-    text-transform: uppercase;
-    font-weight: 400 !important;
-    padding: 18px;
-    margin: 10px;
+.hero-text h1 {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
-.bg-primary {
-    color: #fff !important;
-    font-weight: 700 !important;
-    font-family: system-ui !important;
+.hero-text p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
 }
 
-.bg-dentist {
-    background-color: #2456a6 !important;
-}
-
-.bg-warning {
-    background-color: #e3ba26 !important;
-    font-weight: 700 !important;
-}
-
-.bg-dentist .nav-link {
-    color: white !important;
-}
-
-.bg-dentist .nav-link {
-    color: white !important;
-}
-
-.bg-dentist .nav-link {
-    color: white !important;
-}
-
-.bg-dentist .nav-link:hover {
-    text-decoration: underline;
-}
-
-.fa-bars {
-    color: wheat !important;
-}
-
-.dentist-card-image {
-    max-width: 348px;
-    max-height: 242px;
-    min-height: 242px;
-}
-
-img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-}
-
+/* Specific overrides */
 .dentist-spacer {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
-/* Desktop View */
-@media only screen and (max-width: 768px) {
-    
-    .dentist-card-image {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
+.section-title {
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-color);
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+.object-fit-cover {
+    object-fit: cover;
+}
+
+.hover-white:hover {
+    color: var(--white) !important;
+}
+
+.opacity-25 {
+    opacity: 0.25;
+}
+
+.bg-footer {
+    background-color: #004494 !important;
+    /* Deep Blue, slightly darker than primary */
+}
+
+/* Light Footer Variant */
+.bg-footer-light {
+    background-color: #ffffff !important;
+    border-top: 1px solid #e9ecef;
+    color: var(--dark-text) !important;
+}
+
+.bg-footer-light a {
+    color: #6c757d;
+    transition: color 0.2s;
+}
+
+.bg-footer-light a:hover {
+    color: var(--primary-color) !important;
+    text-decoration: none;
+}
+
+.bg-footer-light .text-white-50 {
+    color: #6c757d !important;
+}
+
+.hero-img {
+    max-height: 450px;
+    object-fit: contain;
+    width: 100%;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 767.98px) {
+    .display-4 {
+        font-size: 2.5rem;
     }
-}
-.dentist-logo-parta {
-    color: #ffffff;
-    font-weight: 700;
-    font-size: medium;
-}
-.dentist-logo-partb {
-    color: #08b0d5;
-    font-weight: 700;
-    font-size: medium;
-    margin-left: 3px;
-}
+    
+    .hero-img {
+        max-height: 280px;
+        margin-top: 2rem;
+    }
 
-.dentist-logo-partb::after {
-    content: ".in";
-    color: black;
-    background-color: wheat;
-    border-radius: 22%;
-    margin-left: 4px;
-    padding: 3px;
-}
-.about-img {
-    border-radius : 70px;
+    .hero-text {
+        text-align: center;
+        padding-bottom: 2rem !important;
+    }
+
+    .hero-text .d-flex {
+        justify-content: center;
+    }
+    
+    .hero-text .btn {
+        margin-bottom: 1rem;
+        margin-right: 0 !important;
+        width: 100%;
+        display: block;
+    }
+    
+    /* Fix Team Image Height on Mobile */
+    .object-fit-cover {
+        min-height: 250px !important; 
+        max-height: 300px;
+    }
+    
+    /* Adjust Card spacing */
+    .card {
+        margin-bottom: 1.5rem;
+    }
 }

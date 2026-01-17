@@ -4,3 +4,7 @@ _site
 Gemfile.lock
 .jekyll-metadata
 .vs
+
+.pub
+hidentist_ssh
+hidentist_ssh.pub
